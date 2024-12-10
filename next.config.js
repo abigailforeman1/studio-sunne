@@ -1,26 +1,14 @@
-// const nextConfig = {
-//   reactStrictMode: true,
-// }
+const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
+}
 
 const withTM = require("next-transpile-modules")([
   "three",
-  // "react-three-fiber",
   "@react-three/fiber",
-  // "drei",
   "@react-three/drei"
 ]);
 
-// module.exports = withTM({
-//   webpack(config, options) {
-//     config.module.rules.push({
-//       test: /\.(glb|gltf)$/,
-//       use: {
-//         loader: "file-loader",
-//       },
-//     });
+const withCSS = require('@zeit/next-css')
 
-//     return config;
-//   }
-// })
-
-module.exports = withTM();
+module.exports = nextConfig;
