@@ -13,5 +13,9 @@
     "save-dev": "^0.0.1-security",
     "three": "^0.171.0",
     "three-stdlib": "^2.34.0"
+  },
+  "devDependencies": {
+    "@types/node": "22.10.1",
+    "typescript": "5.7.2"
   }
 }

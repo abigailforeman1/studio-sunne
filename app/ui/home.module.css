@@ -2,3 +2,42 @@
   width: 100vw;
   height: 100vh;
 }
+
+.leftMenu {
+  position: absolute;
+  margin-left: 20px;
+  /* background-color: pink; */
+  bottom: 0;
+  height: 150px;
+  width: 100vw;
+  display: flex;
+  z-index: 1;
+}
+
+.leftMenuContents {
+  height: 100%;
+  width: 205px;
+  /* background-color: red; */
+}
+
+.leftMenuContentsLogo {
+  /* height: 100%; */
+  width: 100%;
+  /* background-color: greenyellow; */
+}
+
+.leftMenuContentsInfo {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !important;
+  /* background-color: blueviolet; */
+  margin-top: 10px;
+}
+
+.leftMenuContentsInfoText {
+  margin: 0;
+  color: #d4d0be;
+  font-weight: 300;
+  letter-spacing: 0.7px;
+  font-size: 14px;
+  line-height: 21px;
+  text-decoration: none;
+}
