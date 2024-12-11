@@ -7,9 +7,9 @@ Files: ./public/studio-sunne-icon.gltf [4.35MB] > /Users/abi/Documents/abigail/s
 import React, { useRef, useState, useEffect } from "react";
 import * as THREE from "three";
 import { useFrame } from "@react-three/fiber";
-import { useGLTF } from "@react-three/drei";
+import { useGLTF, Decal, useTexture } from "@react-three/drei";
 
-export function Model(props) {
+export function Model({ chosenTexture }) {
   /* Refs */
   const group = useRef();
   const actions = useRef();
@@ -24,6 +24,11 @@ export function Model(props) {
 
   /* set animation */
   useEffect(() => {
+    // console.log(group);
+    // group.current.scale.x = 0;
+    // group.current.scale.y = 0;
+    // group.current.scale.z = 0;
+
     if (animation) {
       actions.current = {
         idle: mixer.clipAction(animation[0], group.current),
@@ -36,17 +41,48 @@ export function Model(props) {
   //* animation update
   useFrame((_, delta) => mixer.update(delta));
   //* rotation
-  useFrame(() => (group.current.rotation.y += 0.01));
+  useFrame(() => {
+    group.current.rotation.y += 0.01;
+    // if (group.current.scale.x < 1) {
+    //   group.current.scale.x += 0.01;
+    //   group.current.scale.y += 0.01;
+    //   group.current.scale.z += 0.01;
+  });
+
+  const texture = chosenTexture.length
+    ? useTexture(chosenTexture)
+    : useTexture("/texture1.png");
 
   return (
-    <group {...props} dispose={null} ref={group}>
+    <group dispose={null} ref={group}>
       <mesh
         geometry={nodes.mesh_0.geometry}
         material={nodes.mesh_0.material}
         ref={group}
-      />
+      >
+        {chosenTexture.length ? (
+          <Decal
+            position={[0, 0, 0]}
+            // rotation={[2 * Math.PI, 0, 6.25]}
+            rotation={[Math.PI, 0, 0]}
+            scale={1}
+            map={texture}
+            flatShading
+          />
+        ) : (
+          <></>
+        )}
+      </mesh>
     </group>
   );
 }
 
 useGLTF.preload("/studio-sunne-icon-transformed.glb");
+useTexture.preload("/texture1.png");
+useTexture.preload("/texture2.png");
+useTexture.preload("/texture3.png");
+useTexture.preload("/texture4.png");
+useTexture.preload("/texture5.png");
+useTexture.preload("/texture7.png");
+useTexture.preload("/texture8.png");
+useTexture.preload("/texture9.png");

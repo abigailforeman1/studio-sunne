@@ -4,9 +4,7 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 extend({ OrbitControls });
 
-function Controls(props) {
+export function Controls(props) {
   const { camera, gl } = useThree();
   return <orbitControls attach={"orbitControls"}  args={[camera, gl.domElement]} />;
-}
-
-export default Controls;
+};
