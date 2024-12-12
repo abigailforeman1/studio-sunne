@@ -7,7 +7,6 @@
   animation-timing-function: ease-in;
   animation-duration: 4s;
   position: absolute;
-  z-index: 2;
 }
 
 @keyframes fadeInOpacity {
@@ -33,7 +32,11 @@
 }
 
 .menuLeftContents {
+  position: absolute;
+  bottom: 0px;
+  padding: 20px;
   width: 205px;
+  z-index: 2;
   /* background-color: red; */
 }
 
@@ -60,11 +63,16 @@
 }
 
 .menuRightContents {
+  position: absolute;
+  bottom: 0px;
+  padding: 20px;
+  right: 0px;
   /* background-color: red; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 2;
 }
 
 .menuRightContentsButtons {
@@ -104,11 +112,17 @@
   }
 
   .menuLeftContents {
-    justify-content: start;
+    /* justify-content: start; */
     width: 150px;
+
   }
 
   .menuRightContents {
-    justify-content: end;
+    /* justify-content: end; */
+    top: 0px;
+    bottom: auto;
+    /* left: auto; */
+    /* right: auto; */
+    width: 100%;
   }
 }

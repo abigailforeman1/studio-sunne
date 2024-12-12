@@ -39,7 +39,7 @@ export default function Page() {
 
   return (
     <>
-      <div className={css.menu}>
+      {/* <div className={css.menu}> */}
         <div className={css.menuLeftContents}>
           <div className={css.menuLeftContentsLogo}>
             <StudioSunneLogo />
@@ -105,7 +105,9 @@ export default function Page() {
             ))}
           </div>
         </div>
-      </div>
+      {/* </div> */}
+
+      
       <div className={css.scene}>
         <Canvas
           camera={{
