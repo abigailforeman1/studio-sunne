@@ -121,7 +121,7 @@ export default function Page() {
         <Canvas
           camera={{
             position: [-1, 0, 6],
-            zoom: windowWidth > 600 ? 10 : 8,
+            zoom: windowWidth > 600 ? 10 : 7,
           }}
         >
           <ambientLight color={"white"} intensity={0.6} />
