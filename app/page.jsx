@@ -29,7 +29,9 @@ export default function Page() {
     "",
   ];
   const [chosenTexture, setChosenTexture] = useState("");
-  const [windowWidth, setWindowWidth] = useState(typeof window !== "undefined" ? window.innerWidth : 600);
+  const [windowWidth, setWindowWidth] = useState(
+    typeof window !== "undefined" ? window.innerWidth : 600
+  );
 
   function handleWindowSizeChange() {
     setWindowWidth(window.innerWidth);
@@ -52,6 +54,9 @@ export default function Page() {
   return (
     <>
       {/* <div className={css.menu}> */}
+      <div className={css.menuCenterContents}>
+        <p className={css.copyright}>All rights reserved © Studio Sunne 2024</p>
+      </div>
       <div className={css.menuLeftContents}>
         <div className={css.menuLeftContentsLogo}>
           <StudioSunneLogo />
