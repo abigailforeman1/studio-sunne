@@ -70,7 +70,7 @@ export default function Page() {
             rel="noreferrer"
             href="mailto:hello.studio.sunne@gmail.com"
           >
-            <p className={css.menuLeftContentsInfoText}>info@studiosunne.com</p>
+            <p className={css.menuLeftContentsInfoText}>hello.studio.sunne@gmail.com</p>
           </a>
 
           <a
