@@ -1,4 +1,5 @@
 import "./ui/global.css";
+import Script from "next/script";
 
 export const metadata = {
   title: "Studio Sunne",
@@ -8,6 +9,21 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-TQ7C0XEQ1N"
+        />
+
+        <Script id="google-analytics">
+          {`
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', ${"${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}"});
+  `}
+        </Script>
+      </head>
       <body>{children}</body>
     </html>
   );
