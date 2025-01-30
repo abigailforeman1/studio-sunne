@@ -55,7 +55,7 @@ export default function Page() {
     <>
       {/* <div className={css.menu}> */}
       <div className={css.menuCenterContents}>
-        <p className={css.copyright}>All rights reserved © Studio Sunne 2024</p>
+        <p className={css.copyright}>© Studio Sunne 2024</p>
       </div>
       <div className={css.menuLeftContents}>
         <div className={css.menuLeftContentsLogo}>
