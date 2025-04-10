@@ -8,12 +8,15 @@
     "@react-three/drei": "^9.120.2",
     "@react-three/fiber": "^8.17.10",
     "@zeit/next-css": "^1.0.1",
+    "framer-motion": "^12.6.2",
     "next": "^13.4.4",
     "next-transpile-modules": "^10.0.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-player": "^2.16.0",
     "save-dev": "^0.0.1-security",
     "sharp": "^0.33.5",
+    "swiper": "^11.2.6",
     "three": "^0.171.0",
     "three-stdlib": "^2.34.0"
   }

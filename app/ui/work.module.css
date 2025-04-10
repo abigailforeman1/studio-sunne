@@ -1,0 +1,140 @@
+.work {
+  width: 100vw;
+  height: 100vh;
+  /* padding-left: 40px; */
+  /* padding-right: 40px; */
+  padding-top: 100px;
+  /* background-color: #e9e7e5; */
+  /* display: flex; */
+  /* align-items: center; */
+}
+
+.workContainer {
+  /* background-color: antiquewhite; */
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  /* justify-content: space-between;
+  gap: 100px;
+  align-items: flex-start; */
+}
+
+.myswiper {
+  /* background-color: palevioletred; */
+}
+
+.swiperslide {
+  /* background-color: seagreen; */
+  padding-left: 20px;
+  padding-right: 20px;
+  /* max-width: 760px; */
+}
+
+.reactplayer {
+  /* background-color: yellow; */
+  /* max-width: 760px; */
+  pointer-events: none;
+}
+
+.reactplayer iframe {
+  width: 100%;
+  height: 100%;
+  max-width: 760px;
+}
+
+.workCard {
+  /* background-color: paleturquoise; */
+  /* padding-top: calc(432 / 640 * 100%); */
+  text-decoration: none;
+  max-width: 760px;
+
+  /* width: 700px;
+  height: 100%; */
+  /* height: 0; */
+  /* overflow: hidden; */
+  /* position: relative; */
+}
+
+.workCardText {
+  margin: 0;
+  color: #a09f3b;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  font-size: 12px;
+  line-height: 18px;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 800px) {
+  .myswiper {
+    height: 70vh;
+    overflow: visible !important;
+  }
+
+  .reactplayer {
+    /* background-color: aqua; */
+  }
+
+  .reactplayer iframe {
+    width: 100%;
+    height: 100%;
+    /* max-width: 300px; */
+  }
+
+  .work {
+    padding-top: 10px;
+    display: flex;
+  }
+
+  .workCard {
+    /* max-width: 300px; */
+  }
+
+  .workCardText {
+    margin: 0;
+    color: #a09f3b;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    font-size: 10px;
+    line-height: 15px;
+    text-decoration: none;
+  }
+}
+
+.workCardTextFadeIn {
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.2s;
+}
+
+.workCardTextFadeOut {
+  opacity: 0;
+  animation-name: fadeOutOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-duration: 0.2s;
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOutOpacity {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.workCardLink:hover {
+  opacity: 1;
+}
