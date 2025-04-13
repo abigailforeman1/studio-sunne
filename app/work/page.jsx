@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import css from "../ui/work.module.css";
 import { WorkCard } from "../components/WorkCard";
 import VideoPlayer from "../components/VideoPlayer";
-import StudioSunneLogo from "../ui/studio-sunne-logo";
 import { usePathname } from "next/navigation";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -14,7 +13,6 @@ import { Mousewheel, FreeMode } from "swiper/modules";
 
 export default function Page() {
   const pathname = usePathname();
-  console.log("here", pathname);
   const [workHovered, updateWorkHovered] = useState(0);
   const [windowWidth, setWindowWidth] = useState(
     typeof window !== "undefined" ? window.innerWidth : 801
@@ -30,6 +28,17 @@ export default function Page() {
       window.removeEventListener("resize", handleWindowSizeChange);
     };
   }, [windowWidth]);
+
+
+  useEffect(() => {
+    document.body.style.backgroundColor = pathname.includes("work")
+      ? "#e9e7e5"
+      : "#395fff";
+
+    return () => {
+      document.body.style.backgroundColor = "#395fff"; // reset on unmount
+    };
+  }, [pathname]);
 
   const workItems = [
     {
@@ -112,7 +121,6 @@ export default function Page() {
                 paddingBottom: i === workItems.length - 1 ? "100px" : "0px",
               }}
             >
-              {/* <StudioSunneLogo /> */}
               <VideoPlayer videosrc={item.videosrc} />
 
               <div

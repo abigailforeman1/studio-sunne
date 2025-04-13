@@ -32,7 +32,7 @@ const VideoPlayer = (props) => {
   }, []);
 
   useEffect(() => {
-    console.log("ready?", ready);
+    // console.log("ready?", ready);
   }, [ready]);
 
   return (

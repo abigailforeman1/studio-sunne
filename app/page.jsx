@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Model } from "./components/Model";
 import { Controls } from "./components/OrbitControls";
-import Link from "next/link";
 
 export default function Page() {
 
