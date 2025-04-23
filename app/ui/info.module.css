@@ -1,6 +1,6 @@
 .info {
   width: 100vw;
-  height: 700px;
+  height: 100vh;
 }
 
 .sceneleft {
@@ -88,6 +88,10 @@
 }
 
 @media only screen and (max-width: 800px) {
+  .info {
+    height: 700px;
+  }
+
   .sceneleft {
     width: 70vw;
     height: 45%;
