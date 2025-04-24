@@ -11,10 +11,6 @@ import "swiper/css/free-mode";
 
 import { Mousewheel, FreeMode } from "swiper/modules";
 
-// export const metadata = {
-//   themeColor: "#e9e7e5"
-// };
-
 export default function Page() {
   const pathname = usePathname();
   const [workHovered, updateWorkHovered] = useState(0);
@@ -52,7 +48,7 @@ export default function Page() {
       date: "2025",
       videosrc:
         "https://player.vimeo.com/video/1078256292?h=ce2c2e9aa4&title=0&byline=0&portrait=0&muted=1&autopause=0&controls=0&badge=0&player_id=0&app_id=58479",
-      image: "/beesknees-image.png",
+      // image: "/beesknees-image.png",
       url: "https://www.beeskneesdogwalking.xyz/",
     },
     {
@@ -63,7 +59,7 @@ export default function Page() {
       date: "2024",
       videosrc:
         "https://player.vimeo.com/video/1078258005?h=3b0ba354b0&title=0&byline=0&portrait=0&muted=1&autopause=0&controls=0&badge=0&player_id=0&app_id=58479",
-      image: "/beesknees-image.png",
+      // image: "/beesknees-image.png",
       url: "https://www.outlaw718.com/",
     },
     {
@@ -74,7 +70,7 @@ export default function Page() {
       date: "2024",
       videosrc:
         "https://player.vimeo.com/video/1078257552?h=cae9b76053&title=0&byline=0&portrait=0&muted=1&autopause=0&controls=0&badge=0&player_id=0&app_id=58479",
-      image: "/beesknees-image.png",
+      // image: "/beesknees-image.png",
       url: "https://juicy.yoga/",
     },
     // {

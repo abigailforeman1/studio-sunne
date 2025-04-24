@@ -76,13 +76,3 @@ export function Model({ chosenTexture }) {
     </group>
   );
 }
-
-useGLTF.preload("/studio-sunne-icon-transformed.glb");
-useTexture.preload("/texture1.png");
-useTexture.preload("/texture2.png");
-useTexture.preload("/texture3.png");
-useTexture.preload("/texture4.png");
-useTexture.preload("/texture5.png");
-useTexture.preload("/texture7.png");
-useTexture.preload("/texture8.png");
-useTexture.preload("/texture9.png");

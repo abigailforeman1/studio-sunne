@@ -5,8 +5,20 @@ import { Canvas } from "@react-three/fiber";
 import { Model } from "./components/Model";
 import { Controls } from "./components/OrbitControls";
 
-export default function Page() {
+import { useGLTF, useTexture } from "@react-three/drei";
 
+useGLTF.preload("/studio-sunne-icon-transformed.glb");
+useTexture.preload("/texture1.png");
+useTexture.preload("/texture2.png");
+useTexture.preload("/texture3.png");
+useTexture.preload("/texture4.png");
+useTexture.preload("/texture5.png");
+useTexture.preload("/texture7.png");
+useTexture.preload("/texture8.png");
+useTexture.preload("/texture9.png");
+useGLTF.preload("/info-icon-transformed.glb");
+
+export default function Page() {
   const colours = [
     "#395FFF",
     "#663741",
@@ -50,7 +62,7 @@ export default function Page() {
       colours[Math.floor(Math.random() * colours.length)];
     setChosenTexture(textures[Math.floor(Math.random() * textures.length)]);
   };
-
+  
   return (
     <>
       <div className={css.menuContainer}>
@@ -94,6 +106,7 @@ export default function Page() {
       </div>
       <div className={css.scene}>
         <Canvas
+          id="canvas"
           camera={{
             position: [-1, 0, 6],
             zoom: windowWidth > 600 ? 10 : 8,
