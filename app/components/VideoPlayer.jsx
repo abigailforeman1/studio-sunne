@@ -47,6 +47,7 @@ const VideoPlayer = (props) => {
             }}
             height="100%"
             width="100%"
+            playsinline={true}
             className={css.reactplayer}
             controls={false}
             muted={true}
