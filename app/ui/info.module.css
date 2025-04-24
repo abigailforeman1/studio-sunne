@@ -11,8 +11,8 @@
   opacity: 1;
   animation-name: fadeInOpacity;
   animation-iteration-count: 1;
-  animation-timing-function: ease-in;
-  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.8s;
   position: absolute;
   /* background-color: aquamarine; */
   left: -100px;
@@ -27,8 +27,8 @@
   opacity: 1;
   animation-name: fadeInOpacity;
   animation-iteration-count: 1;
-  animation-timing-function: ease-in;
-  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.8s;
   position: absolute;
   right: 0px;
   bottom: 124px;
@@ -96,8 +96,8 @@
     width: 70vw;
     height: 45%;
     min-width: 300px;
-    top: -50px;
-    left: -50px;
+    top: -60px;
+    left: -60px;
   }
 
   .sceneright {

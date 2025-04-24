@@ -2,7 +2,6 @@ import { useState, lazy, Suspense, useEffect } from "react";
 import React from "react";
 const ReactPlayer = lazy(() => import("react-player"));
 import css from "../ui/work.module.css";
-import Image from "next/legacy/image";
 
 const VideoPlayer = (props) => {
   //video path
@@ -36,13 +35,9 @@ const VideoPlayer = (props) => {
   }, [ready]);
 
   return (
-    <Suspense
-      fallback={
-        <div className={css.workCardText}>loading...</div>
-      }
-    >
+    <Suspense fallback={<div className={css.workCardText}>loading...</div>}>
       {hasWindow && (
-        <>
+        <div className={css.reactplayerWrapper}>
           <ReactPlayer
             onMouseEnter={() => {
               setPlayerShouldPlay(true);
@@ -50,8 +45,7 @@ const VideoPlayer = (props) => {
             onMouseLeave={() => {
               setPlayerShouldPlay(false);
             }}
-            height={windowWidth <= 800 ? "160px" : "360px"}
-            // height="100%"
+            height="100%"
             width="100%"
             className={css.reactplayer}
             controls={false}
@@ -66,12 +60,11 @@ const VideoPlayer = (props) => {
               setPlayerShouldPlay(false);
             }}
             url={videosrc}
-            // light is usefull incase of dark mode
             light={false}
           />
 
           <source src={videosrc} type="video/mp4" />
-        </>
+        </div>
       )}
     </Suspense>
   );

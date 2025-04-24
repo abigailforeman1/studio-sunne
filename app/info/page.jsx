@@ -6,6 +6,10 @@ import { Canvas } from "@react-three/fiber";
 import { InfoModel } from "../components/Info-Model";
 import { Controls } from "../components/OrbitControlsInfo";
 
+// export const metadata = {
+//   themeColor: "#ed7ba1"
+// };
+
 export default function Page() {
   const pathname = usePathname();
 
@@ -52,7 +56,7 @@ export default function Page() {
       <section className={css.infoContainer}>
         <div className={css.bioContainer}>
           <p className={css.bioText}>
-            Welcome to Studio Sunne. We create playful, interactive websites designed to stick with you. Founded by Abi - a full-stack software engineer and graphic designer with agency and startup experience, and co-founder of a design brand with clients including Vogue, Primark, and Clarks. Have an idea? I'd love to bring it to life.
+            Welcome to Studio Sunne. We create playful, interactive websites designed to stick with you. Founded by Abi - a full-stack software engineer, graphic designer, and co-founder of a design brand with clients including Vogue, Primark, and Clarks.<br/>Have an idea? I'd love to bring it to life.
           </p>
         </div>
         <div className={css.clientsContainer}>
