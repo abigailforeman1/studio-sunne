@@ -1,31 +1,27 @@
-// "use client";
-// import { useState, useEffect } from "react";
+"use client";
+import { useState, useEffect } from "react";
 import css from "../ui/info.module.css";
-// import { usePathname } from "next/navigation";
-// import { Canvas } from "@react-three/fiber";
-// import { InfoModel } from "../components/Info-Model";
-// import { Controls } from "../components/OrbitControlsInfo";
-
-export const metadata = {
-  themeColor: "#ed7ba1"
-};
+import { usePathname } from "next/navigation";
+import { Canvas } from "@react-three/fiber";
+import { InfoModel } from "../components/Info-Model";
+import { Controls } from "../components/OrbitControlsInfo";
 
 export default function Page() {
-  // const pathname = usePathname();
+  const pathname = usePathname();
 
-  // useEffect(() => {
-  //   document.body.style.backgroundColor = pathname.includes("info")
-  //     ? "#ed7ba1"
-  //     : "#395fff";
+  useEffect(() => {
+    document.body.style.backgroundColor = pathname.includes("info")
+      ? "#ed7ba1"
+      : "#395fff";
 
-  //   return () => {
-  //     document.body.style.backgroundColor = "#395fff"; // reset on unmount
-  //   };
-  // }, [pathname]);
+    return () => {
+      document.body.style.backgroundColor = "#395fff"; // reset on unmount
+    };
+  }, [pathname]);
 
   return (
     <div className={css.info}>
-      {/* <div className={css.sceneleft}>
+      <div className={css.sceneleft}>
         <Canvas
           camera={{
             position: [-1, 0, 6],
@@ -51,7 +47,7 @@ export default function Page() {
           <InfoModel position={[0, 0, 0]} />
           <Controls />
         </Canvas>
-      </div> */}
+      </div>
 
       <section className={css.infoContainer}>
         <div className={css.bioContainer}>
