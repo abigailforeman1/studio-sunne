@@ -90,12 +90,19 @@ export default function Page() {
     <div className={css.work}>
       <Swiper
         className={css.myswiper}
-        spaceBetween={20}
+        spaceBetween={windowWidth > 479 ? 20 : 20}
         slidesPerView={
-          windowWidth > 1224 ? 2.3 : windowWidth > 800 ? 1.6 : 1.15
+          windowWidth > 1224
+            ? 2.3
+            : windowWidth > 479
+            ? 1.6
+            : windowWidth > 375
+            ? 2.2
+            : 2
         }
         freeMode={true}
-        direction={"horizontal"}
+        direction={windowWidth > 479 ? "horizontal" : "vertical"}
+        // height={"80%"}
         // loop={true}
         // autoHeight={true}
         // onSlideChange={() => console.log("slide change")}
@@ -120,16 +127,18 @@ export default function Page() {
               }}
             >
               <VideoPlayer videosrc={item.videosrc} />
+
               <div
-                className={
-                  workHovered == item.id && windowWidth > 800
+                className={`${
+                  windowWidth > 1224 && workHovered == item.id
                     ? css.workCardTextFadeIn
-                    : windowWidth <= 800
-                    ? css.workCardTextShow
+                    : windowWidth > 1224 && workHovered !== item.id
+                    ? css.workCardTextFadeOut
                     : css.workCardTextFadeOut
-                }
+                }`}
                 style={{
                   paddingTop: "10px",
+                  // height: "120px"
                 }}
               >
                 <div className={css.workCardText}>{item.title}</div>
