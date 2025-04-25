@@ -90,18 +90,17 @@ export default function Page() {
     <div className={css.work}>
       <Swiper
         className={css.myswiper}
-        spaceBetween={windowWidth > 479 ? 20 : 20}
+        spaceBetween={20}
         slidesPerView={
           windowWidth > 1224
             ? 2.3
             : windowWidth > 479
             ? 1.6
-            : windowWidth > 375
-            ? 2.2
-            : 2
+            : 1
         }
         freeMode={true}
-        direction={windowWidth > 479 ? "horizontal" : "vertical"}
+        // direction={windowWidth > 479 ? "horizontal" : "vertical"}
+        direction={"horizontal"}
         // height={"80%"}
         // loop={true}
         // autoHeight={true}

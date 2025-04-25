@@ -109,19 +109,19 @@
 @media only screen and (max-width: 479px) {
   .work {
     /* padding-top: 120px; */
-    height: 100vh;
+    /* height: 100vh;
     width: 100vw;
     display: flex;
     justify-content: space-between;
     overflow: visible;
-    padding-bottom: 110px;
+    padding-bottom: 110px; */
   }
 
   .myswiper {
     height: 100%;
-    width: 80%;
+    /* width: 80%; */
     /* padding: 20px */
-    overflow: visible !important;
+    /* overflow: visible !important; */
     /* margin-bottom: 110px; */
   }
 
