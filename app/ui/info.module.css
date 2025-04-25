@@ -94,14 +94,16 @@
   }
 
   .sceneleft {
-    width: 70vw;
-    height: 45%;
+    /* background-color: aliceblue; */
+    width: 40vw;
+    height: 40%;
     min-width: 300px;
     top: -50px;
     left: -50px;
   }
 
   .sceneright {
+    /* background-color: aliceblue; */
     width: 65vw;
     height: 45%;
     min-width: 280px;
