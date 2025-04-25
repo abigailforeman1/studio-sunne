@@ -120,16 +120,18 @@ export default function Page() {
               }}
             >
               <VideoPlayer videosrc={item.videosrc} />
-
+              {console.log(workHovered)}
+              {console.log(workHovered == item.id || windowWidth <= 800)}
               <div
                 className={
-                  workHovered == item.id || windowWidth <= 800
+                  workHovered == item.id && windowWidth > 800
                     ? css.workCardTextFadeIn
+                    : windowWidth <= 800
+                    ? css.workCardTextShow
                     : css.workCardTextFadeOut
                 }
                 style={{
                   paddingTop: "10px",
-                  height: "70px",
                 }}
               >
                 <div className={css.workCardText}>{item.title}</div>

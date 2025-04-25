@@ -95,6 +95,10 @@
   animation-duration: 0.2s;
 }
 
+.workCardTextShow {
+  opacity: 1;
+}
+
 @keyframes fadeInOpacity {
   0% {
     opacity: 0;
