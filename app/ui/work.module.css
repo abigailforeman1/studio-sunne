@@ -108,6 +108,7 @@
 
 @media only screen and (max-width: 479px) {
   .work {
+    padding-left: 15px;
     /* padding-top: 120px; */
     /* height: 100vh;
     width: 100vw;
@@ -120,14 +121,18 @@
   .myswiper {
     height: 100%;
     /* width: 80%; */
-    /* padding: 20px */
     /* overflow: visible !important; */
     /* margin-bottom: 110px; */
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 4s;
   }
 
-  .swiperSlide {
+  .swiperslide {
     /* height: auto;
     align-self: stretch; */
+    padding: 0px;
   }
 
   .swiperslide:last-child {
