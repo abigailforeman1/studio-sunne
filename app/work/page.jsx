@@ -120,8 +120,6 @@ export default function Page() {
               }}
             >
               <VideoPlayer videosrc={item.videosrc} />
-              {console.log(workHovered)}
-              {console.log(workHovered == item.id || windowWidth <= 800)}
               <div
                 className={
                   workHovered == item.id && windowWidth > 800
