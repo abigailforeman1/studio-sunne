@@ -59,8 +59,9 @@ const VideoPlayer = (props) => {
               // setReady(true);
             }}
             playing={playerShouldPlay}
+            onPause={() => console.log("paused")}
             onError={(e) => {
-              console.log("error", e)
+              console.log("error", e);
               setPlayerShouldPlay(false);
             }}
             url={videosrc}

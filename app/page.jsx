@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Model } from "./components/Model";
 import { Controls } from "./components/OrbitControls";
-
+import { useTheme } from "./ThemeContext";
 import { useGLTF, useTexture } from "@react-three/drei";
 
 useGLTF.preload("/studio-sunne-icon-transformed.glb");
@@ -44,6 +44,7 @@ export default function Page() {
   const [windowWidth, setWindowWidth] = useState(
     typeof window !== "undefined" ? window.innerWidth : 600
   );
+  const { setThemeColor } = useTheme();
 
   function handleWindowSizeChange() {
     setWindowWidth(window.innerWidth);
@@ -58,11 +59,12 @@ export default function Page() {
 
   const handleButtonClick = () => {
     const bodyElement = document.getElementsByTagName("body");
-    bodyElement[0].style.backgroundColor =
-      colours[Math.floor(Math.random() * colours.length)];
+    const newColor = colours[Math.floor(Math.random() * colours.length)];
+    bodyElement[0].style.backgroundColor = newColor;
+    setThemeColor(newColor);
     setChosenTexture(textures[Math.floor(Math.random() * textures.length)]);
   };
-  
+
   return (
     <>
       <div className={css.menuContainer}>
@@ -98,6 +100,7 @@ export default function Page() {
                 onClick={(e) => {
                   const bodyElement = document.getElementsByTagName("body");
                   bodyElement[0].style.backgroundColor = e.target.value;
+                  setThemeColor(e.target.value);
                 }}
               ></button>
             ))}
