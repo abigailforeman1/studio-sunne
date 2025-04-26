@@ -45,8 +45,8 @@ export default function Page() {
     typeof window !== "undefined" ? window.innerWidth : 600
   );
   const { setThemeColor } = useTheme();
-  setThemeColor(document.body.style.backgroundColor);
-
+  setThemeColor(document.body.style.backgroundColor.length ? document.body.style.backgroundColor : "#395fff");
+  
   function handleWindowSizeChange() {
     setWindowWidth(window.innerWidth);
   }
@@ -59,9 +59,8 @@ export default function Page() {
   }, []);
 
   const handleButtonClick = () => {
-    const bodyElement = document.getElementsByTagName("body");
     const newColor = colours[Math.floor(Math.random() * colours.length)];
-    bodyElement[0].style.backgroundColor = newColor;
+    document.body.style.backgroundColor = newColor;
     setThemeColor(newColor);
     setChosenTexture(textures[Math.floor(Math.random() * textures.length)]);
   };
