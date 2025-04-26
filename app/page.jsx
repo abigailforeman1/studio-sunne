@@ -44,9 +44,16 @@ export default function Page() {
   const [windowWidth, setWindowWidth] = useState(
     typeof window !== "undefined" ? window.innerWidth : 600
   );
-  const { setThemeColor } = useTheme();
-  setThemeColor(document.body.style.backgroundColor.length ? document.body.style.backgroundColor : "#395fff");
-  
+  const { themeColor, setThemeColor } = useTheme();
+
+  useEffect(() => {
+    setThemeColor(
+      document.body.style.backgroundColor.length
+        ? document.body.style.backgroundColor
+        : "#395fff"
+    );
+  }, [themeColor]);
+
   function handleWindowSizeChange() {
     setWindowWidth(window.innerWidth);
   }
