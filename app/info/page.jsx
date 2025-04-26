@@ -5,9 +5,12 @@ import { usePathname } from "next/navigation";
 import { Canvas } from "@react-three/fiber";
 import { InfoModel } from "../components/Info-Model";
 import { Controls } from "../components/OrbitControlsInfo";
+import { useTheme } from "../ThemeContext";
 
 export default function Page() {
   const pathname = usePathname();
+  const { setThemeColor } = useTheme();
+  setThemeColor("#ed7ba1");
 
   useEffect(() => {
     document.body.style.backgroundColor = pathname.includes("info")

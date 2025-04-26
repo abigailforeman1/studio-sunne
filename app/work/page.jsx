@@ -4,12 +4,11 @@ import css from "../ui/work.module.css";
 import { WorkCard } from "../components/WorkCard";
 import VideoPlayer from "../components/VideoPlayer";
 import { usePathname } from "next/navigation";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
-
 import { Mousewheel, FreeMode } from "swiper/modules";
+import { useTheme } from "../ThemeContext";
 
 export default function Page() {
   const pathname = usePathname();
@@ -17,6 +16,8 @@ export default function Page() {
   const [windowWidth, setWindowWidth] = useState(
     typeof window !== "undefined" ? window.innerWidth : 801
   );
+  const { setThemeColor } = useTheme();
+  setThemeColor("#e9e7e5");
 
   function handleWindowSizeChange() {
     setWindowWidth(window.innerWidth);
@@ -91,13 +92,7 @@ export default function Page() {
       <Swiper
         className={css.myswiper}
         spaceBetween={windowWidth > 479 ? 20 : 15}
-        slidesPerView={
-          windowWidth > 1224
-            ? 2.3
-            : windowWidth > 479
-            ? 1.6
-            : 1.1
-        }
+        slidesPerView={windowWidth > 1224 ? 2.3 : windowWidth > 479 ? 1.6 : 1.1}
         freeMode={true}
         // direction={windowWidth > 479 ? "horizontal" : "vertical"}
         direction={"horizontal"}
