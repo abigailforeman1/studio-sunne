@@ -5,7 +5,7 @@ import { Footer } from "./components/Footer";
 export const metadata = {
   title: "Studio Sunne",
   description: "Creative studio specialising in web design.",
-  themeColor: "#395fff",
+  // themeColor: "#395fff",
 };
 
 export default async function RootLayout({ children }) {
