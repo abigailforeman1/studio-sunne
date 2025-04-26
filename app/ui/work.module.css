@@ -1,7 +1,7 @@
 .work {
   width: 100vw;
   height: 100vh;
-  padding-top: 20px;
+  padding-top: 15px;
   background-color: #e9e7e5;
 }
 
@@ -107,18 +107,10 @@
 }
 
 @media only screen and (max-width: 479px) {
-  .work {
-    padding-left: 15px;
-    /* padding-top: 120px; */
-    /* height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: space-between;
-    overflow: visible;
-    padding-bottom: 110px; */
-  }
 
   .myswiper {
+    padding-right: 15px !important;
+    padding-left: 15px !important;
     height: 100%;
     /* width: 80%; */
     /* overflow: visible !important; */

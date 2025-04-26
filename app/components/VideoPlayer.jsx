@@ -6,7 +6,7 @@ import css from "../ui/work.module.css";
 const VideoPlayer = (props) => {
   //video path
   const { videosrc } = props;
-  const [ready, setReady] = useState(false);
+  // const [ready, setReady] = useState(false);
   const [playerShouldPlay, setPlayerShouldPlay] = useState(false);
   const [hasWindow, setHasWindow] = useState(false);
   const [windowWidth, setWindowWidth] = useState(
@@ -30,21 +30,23 @@ const VideoPlayer = (props) => {
     }
   }, []);
 
-  useEffect(() => {
-    // console.log("ready?", ready);
-  }, [ready]);
+  // useEffect(() => {
+  //   console.log("ready?", ready);
+  // }, [ready]);
 
   return (
     <Suspense fallback={<div className={css.workCardText}>loading...</div>}>
       {hasWindow && (
         <div className={css.reactplayerWrapper}>
           <ReactPlayer
-            onMouseEnter={() => {
-              setPlayerShouldPlay(true);
-            }}
-            onMouseLeave={() => {
-              setPlayerShouldPlay(false);
-            }}
+            // onMouseEnter={() => {
+            //   console.log("mouse enter")
+            //   setPlayerShouldPlay(true);
+            // }}
+            // onMouseLeave={() => {
+            //   console.log("mouse leave")
+            //   setPlayerShouldPlay(false);
+            // }}
             height="100%"
             width="100%"
             playsinline={true}
@@ -54,10 +56,11 @@ const VideoPlayer = (props) => {
             loop={true}
             onReady={() => {
               setPlayerShouldPlay(true);
-              setReady(true);
+              // setReady(true);
             }}
             playing={playerShouldPlay}
             onError={(e) => {
+              console.log("error", e)
               setPlayerShouldPlay(false);
             }}
             url={videosrc}
