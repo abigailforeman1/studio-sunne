@@ -45,7 +45,7 @@ export default function Page() {
     typeof window !== "undefined" ? window.innerWidth : 600
   );
   const { setThemeColor } = useTheme();
-  setThemeColor("#395fff");
+  setThemeColor(document.body.style.backgroundColor);
 
   function handleWindowSizeChange() {
     setWindowWidth(window.innerWidth);
