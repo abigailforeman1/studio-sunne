@@ -3,19 +3,15 @@ import Script from "next/script";
 import { Footer } from "./components/Footer";
 import { ThemeProvider } from "./ThemeContext";
 import { ThemeUpdater } from "./ThemeUpdater";
-import ogImage from "./opengraph-image.png";
 
 export const metadata = {
   title: "Studio Sunne",
   description: "Creative studio specialising in web design.",
+  metadataBase: new URL("https://studiosunne.com"),
   openGraph: {
-    images: [
-      {
-        url: ogImage.src,
-        width: ogImage.width,
-        height: ogImage.height,
-      },
-    ],
+    images: {
+      image: "/opengraph-image.png",
+    },
   },
 };
 
